@@ -1,15 +1,23 @@
 # Environmental Dynamics and Persistent Evolutionary Novelty
 
-The latest complete research package is [cas_oee_research_followup_draft.zip](cas_oee_research_followup_draft.zip). Download and extract it to access simulation code, frozen pilot protocol, tests, raw replicate data and seeds, manifests, audit, analysis, figures, manuscript draft, and confirmatory follow-up planning. The earlier pilot-only archive, [cas_oee_research.zip](cas_oee_research.zip), is retained as a prior snapshot.
+This repository contains an exploratory computational study of whether environmental dynamics and interaction-network structure jointly affect persistent phenotype recurrence in a finite digital population. The project does **not** demonstrate open-ended evolution.
 
-## Pilot status and result
+## Complete exploratory package
 
-The package contains 240 planned exploratory simulation trajectories. Validation and raw-data integrity checks passed. This finite model does not demonstrate open-ended evolution.
+Download the [complete v0.3 archive](https://github.com/masudhassan4172-droid/cas-oee-research/raw/refs/heads/main/cas_oee_research_complete_exploratory_v0.3.tar.xz) (336 trajectories; source, raw data, seeds, tests, analyses, figures, model/protocol documentation, and manuscript draft). On macOS or Linux, extract with:
 
-The primary fast-versus-static Environment × Network interaction estimate was −0.0078 persistent events per 1,000 eligible births (95% seed-block bootstrap interval: −0.0234 to 0.0078). The interval includes zero; the pilot does not resolve a clear interaction. The timescale ratio was not analyzed because adaptive recovery time was not independently calibrated.
+`tar -xJf cas_oee_research_complete_exploratory_v0.3.tar.xz`
 
-## Follow-up plan status
+The earlier ZIP archives in this repository are retained as historical snapshots; v0.3 is the latest complete package.
 
-The archive includes a **PROPOSED draft**, not an external preregistration, independent implementation, or new simulation result. Sample size is deliberately not fixed: a 0.02-per-1,000 planning benchmark would imply about 50 seed blocks, while planning around the pilot's absolute 0.0078 estimate would imply roughly 320 after a margin. Neither value is an established minimum important effect, and the pilot estimate is uncertain. The protocol requires independent justification, code/seed freeze, implementation review, and registration before follow-up runs.
+## Observed results
 
-The GitHub root distributes ZIP archives; the included Actions workflow is not active at this archive-only root. Extract an archive to restore its source-tree layout. No software license has been selected.
+The package combines the original 240 exploratory trajectories with 96 documented extension trajectories. Fourteen automated tests pass, and the nine-stage raw-data/provenance audit passes.
+
+For the primary fast-versus-static environment × network comparison, the estimated difference-in-differences is **−0.0078 persistent events per 1,000 eligible births** (95% seed-block bootstrap interval **−0.0234 to 0.0078**, 12 independent seed blocks). The interval includes zero, so this experiment does not resolve a clear interaction. Matched aperiodic schedules likewise do not resolve an interaction. A parallel phenotype descriptor changes the measured rate while replaying the same evolutionary trajectories, showing that conclusions depend on the operational measurement map. Recovery calibration was performed as a separate exploratory extension; the resulting timescale ratio remains secondary.
+
+## Interpretation and limits
+
+These are exploratory results from one finite model, not confirmatory evidence about biological evolution, general network effects, criticality, or open-ended evolution. The model’s novelty measure is operational and observer-dependent. The draft manuscript and follow-up protocol are not externally preregistered or independently implemented/reviewed. Do not start confirmatory runs until an independent reviewer evaluates the model and measurement, the smallest effect of interest and precision target are justified, code and seeds are frozen, and the protocol is registered.
+
+See the archive’s project status, audit, risk register, literature-search addendum, and manuscript for details. No software license has been selected.
